@@ -29,12 +29,13 @@ class SolusvmClient
 
     /**
      * Execute the action.
-     * 
+     *
      * @access private
      * @param string
      * @return string
      */
-    private function execute($action) {
+    private function execute($action)
+    {
         // Check action string.
         if (!in_array($action, array('reboot', 'shutdown', 'boot', 'status'))) {
             throw new Exception("Error action for API.Only thus action allowed: reboot, shutdown, boot, status.", 1);
@@ -59,11 +60,23 @@ class SolusvmClient
         $data = curl_exec($ch);
 
         // error handling
-        if($data === false)
+        if ($data === false) {
             throw new Exception("API Query error: " . curl_error($ch));
+        }
+
 
         // cleanup
         curl_close($ch);
         return $data;
+    }
+
+    /**
+     * Reboot
+     *
+     * @access public
+     */
+    public function reboot()
+    {
+        $this->execute('reboot');
     }
 }
