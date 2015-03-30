@@ -1,0 +1,22 @@
+{
+    "name": "kofj/solusvm-api-php-client",
+    "description": "A simple client to control your VPS box through the SolusVM API.",
+    "keywords": ["API", "client", "SolusVM", "VPS"],
+    "homepage": "https://github.com/kofj/solusvm-api-php-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frank Kung",
+            "email": "kfanjian@gmail.com",
+            "homepage": "http://kofj.github.io"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "kofj\\SolusVM\\Client\\": "src/"
+        }
+    }
+}
