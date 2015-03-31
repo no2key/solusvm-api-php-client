@@ -79,4 +79,34 @@ class SolusvmClient
     {
         $this->execute('reboot');
     }
+
+    /**
+     * Boot
+     *
+     * @access public
+     */
+    public function boot()
+    {
+        $this->execute('boot');
+    }
+
+    /**
+     * shutdown
+     *
+     * @access public
+     */
+    public function shutdown()
+    {
+        $this->execute('shutdown');
+    }
+
+    /**
+     * status
+     *
+     * @access public
+     */
+    public function status()
+    {
+        $this->execute('status');
+    }
 }
