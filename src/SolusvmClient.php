@@ -106,6 +106,6 @@ class SolusvmClient
      */
     public function status()
     {
-        $this->execute('status');
+        return $this->execute('status');
     }
 }
