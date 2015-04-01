@@ -12,9 +12,13 @@
         }
     ],
     "require-dev": {
-        "phpunit/phpunit": "4.*"
+        "phpunit/phpunit": "4.*",
+        "vlucas/phpdotenv": "*"
     },
     "autoload": {
+        "classmap": [
+            "vendor/vlucas/phpdotenv/src"
+        ],
         "psr-4": {
             "kofj\\SolusVM\\": "src/"
         }
