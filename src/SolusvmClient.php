@@ -1,4 +1,4 @@
-<?php namespace kofj\solusvm-api-client;
+<?php namespace kofj\SolusVM;
 
 class SolusvmClient
 {
@@ -63,7 +63,6 @@ class SolusvmClient
         if ($data === false) {
             throw new Exception("API Query error: " . curl_error($ch));
         }
-
 
         // cleanup
         curl_close($ch);
