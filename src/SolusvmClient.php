@@ -61,7 +61,7 @@ class SolusvmClient
 
         // error handling
         if ($data === false) {
-            throw new Exception("API Query error: " . curl_error($ch));
+            throw new \Exception("API Query error: " . curl_error($ch));
         }
 
         // cleanup
